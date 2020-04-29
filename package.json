@@ -4,7 +4,7 @@
 	"description": "Waves Ride language support and Waves JS Console for Visual Studio Code",
 	"author": "wavesplatform",
 	"license": "MIT",
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/wavesplatform/ride-vscode"
@@ -92,6 +92,7 @@
 	},
 	"scripts": {
 		"publish-server": "npm run compile:server && cd server && npm run publish-server",
+		"publish-server-beta": "npm run compile:server && cd server && npm run publish-server  --tag beta",
 		"vscode:prepublish": "cd extension && npm run update-vscode && cd .. && npm run compile && npm run updateTmLanguage",
 		"compile:extension": "npm run syncCompilerVersion && tsc -p ./extension/tsconfig.json && cd ./extension && ./node_modules/.bin/webpack",
 		"compile:server": "tsc -p ./server/tsconfig.json",
